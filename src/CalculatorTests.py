@@ -46,6 +46,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(round(float(row['Result']), 8), round(self.calculator.result, 8))
         test_data.clear()
 
+    def test_square(self):
+        test_data = CsvReader('/src/Square.csv').data
+        for row in test_data:
+            self.assertEqual(int(row['Result']), self.calculator.sqr(row['Value 1']))
+            self.assertEqual(int(row['Result']), self.calculator.result)
+        test_data.clear()
+
     def test_results_property_calculator(self):
         self.assertEqual(self.calculator.result, 0)
 
