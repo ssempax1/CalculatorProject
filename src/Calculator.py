@@ -1,3 +1,6 @@
+import math
+
+
 def addition(a, b):
     a = int(a)
     b = int(b)
@@ -24,12 +27,12 @@ def division(a, b):
 
 def square(a):
     int(a)
-    return a ** a
+    return math.pow(a, 2)
 
 
 def sqroot(a):
     a = float(a)
-    return float(a) ** 0.5
+    return math.sqrt(a)
 
 
 class Calculator:
